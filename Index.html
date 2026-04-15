@@ -34,16 +34,16 @@
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
 
   /* --- LAYOUT --- */
   .app {
-    max-width: 900px;
+    max-width: 940px;
     margin: 0 auto;
-    padding: 20px 16px 80px;
+    padding: 24px 18px 100px;
   }
 
   /* --- HEADER --- */
@@ -52,11 +52,11 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 24px;
-    padding-bottom: 16px;
+    padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
   .logo {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
     letter-spacing: -0.5px;
     color: var(--text);
@@ -71,16 +71,16 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 11px;
+    font-size: 13px;
     color: var(--muted);
     background: var(--surface2);
-    padding: 4px 10px;
+    padding: 5px 12px;
     border-radius: 20px;
     border: 1px solid var(--border);
     font-family: 'DM Mono', monospace;
   }
   .dot {
-    width: 6px; height: 6px;
+    width: 7px; height: 7px;
     border-radius: 50%;
     background: var(--green);
     box-shadow: 0 0 6px var(--green);
@@ -95,7 +95,7 @@
     background: linear-gradient(135deg, #1a1a2e 0%, #16162a 50%, #1a1a2e 100%);
     border: 1px solid var(--border2);
     border-radius: var(--r);
-    padding: 24px;
+    padding: 28px;
     margin-bottom: 20px;
     position: relative;
     overflow: hidden;
@@ -104,19 +104,19 @@
     content: '';
     position: absolute;
     top: -40px; right: -40px;
-    width: 180px; height: 180px;
+    width: 200px; height: 200px;
     background: radial-gradient(circle, rgba(124,110,247,0.15) 0%, transparent 70%);
     pointer-events: none;
   }
-  .total-label { font-size: 12px; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.8px; }
+  .total-label { font-size: 13px; color: var(--muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.8px; }
   .total-value {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 600;
     letter-spacing: -1px;
     color: var(--text);
     font-family: 'DM Mono', monospace;
     line-height: 1;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
   .total-meta {
     display: flex;
@@ -125,15 +125,15 @@
     flex-wrap: wrap;
   }
   .total-change {
-    font-size: 13px;
+    font-size: 14px;
     font-family: 'DM Mono', monospace;
-    padding: 3px 10px;
+    padding: 4px 12px;
     border-radius: 20px;
     font-weight: 500;
   }
   .total-change.pos { background: rgba(62,207,142,0.12); color: var(--green); }
   .total-change.neg { background: rgba(247,110,110,0.12); color: var(--red); }
-  .last-update { font-size: 11px; color: var(--muted); }
+  .last-update { font-size: 13px; color: var(--muted); }
 
   /* --- DONUT CHART --- */
   .chart-section {
@@ -149,20 +149,20 @@
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--r);
-    padding: 20px;
+    padding: 22px;
   }
   .card-title {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--muted);
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
     font-weight: 500;
   }
   .donut-wrap {
     position: relative;
-    width: 140px; height: 140px;
-    margin: 0 auto 16px;
+    width: 150px; height: 150px;
+    margin: 0 auto 18px;
   }
   #donutChart { width: 100%; height: 100%; }
   .donut-center {
@@ -171,36 +171,36 @@
     transform: translate(-50%,-50%);
     text-align: center;
   }
-  .donut-center .dc-label { font-size: 10px; color: var(--muted); }
-  .donut-center .dc-val { font-size: 14px; font-weight: 600; color: var(--text); font-family: 'DM Mono', monospace; }
+  .donut-center .dc-label { font-size: 12px; color: var(--muted); }
+  .donut-center .dc-val { font-size: 16px; font-weight: 600; color: var(--text); font-family: 'DM Mono', monospace; }
   .legend { display: flex; flex-direction: column; gap: 8px; }
   .legend-item {
     display: flex; align-items: center; gap: 8px;
     cursor: pointer;
     border-radius: 8px;
-    padding: 2px 4px;
+    padding: 3px 5px;
     transition: background 0.15s;
   }
   .legend-item:hover { background: var(--surface2); }
-  .legend-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
-  .legend-name { flex: 1; font-size: 13px; }
-  .legend-pct { font-size: 12px; font-family: 'DM Mono', monospace; color: var(--muted); }
-  .legend-val { font-size: 12px; font-family: 'DM Mono', monospace; color: var(--text); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 3px; flex-shrink: 0; }
+  .legend-name { flex: 1; font-size: 14px; }
+  .legend-pct { font-size: 13px; font-family: 'DM Mono', monospace; color: var(--muted); }
+  .legend-val { font-size: 13px; font-family: 'DM Mono', monospace; color: var(--text); }
 
   /* --- PERFORMANCE --- */
   .perf-card {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--r);
-    padding: 20px;
+    padding: 22px;
   }
-  .bar-list { display: flex; flex-direction: column; gap: 10px; }
-  .bar-item { display: flex; flex-direction: column; gap: 4px; }
+  .bar-list { display: flex; flex-direction: column; gap: 12px; }
+  .bar-item { display: flex; flex-direction: column; gap: 5px; }
   .bar-header { display: flex; justify-content: space-between; align-items: center; }
-  .bar-name { font-size: 12px; color: var(--muted); }
-  .bar-val { font-size: 12px; font-family: 'DM Mono', monospace; color: var(--text); }
+  .bar-name { font-size: 14px; color: var(--muted); }
+  .bar-val { font-size: 14px; font-family: 'DM Mono', monospace; color: var(--text); }
   .bar-track {
-    height: 4px;
+    height: 5px;
     background: var(--surface2);
     border-radius: 2px;
     overflow: hidden;
@@ -218,8 +218,8 @@
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 4px;
-    margin-bottom: 16px;
+    padding: 5px;
+    margin-bottom: 18px;
     overflow-x: auto;
     scrollbar-width: none;
   }
@@ -227,12 +227,12 @@
   .tab-btn {
     flex: 1;
     min-width: fit-content;
-    padding: 7px 12px;
+    padding: 9px 14px;
     border: none;
     background: transparent;
     color: var(--muted);
     font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     border-radius: 7px;
     cursor: pointer;
@@ -247,25 +247,25 @@
     color: var(--text);
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
   }
-  .tab-icon { font-size: 14px; }
+  .tab-icon { font-size: 15px; }
 
   /* --- ASSET LIST --- */
   .assets-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
-  .assets-title { font-size: 13px; color: var(--muted); font-weight: 500; }
+  .assets-title { font-size: 15px; color: var(--muted); font-weight: 500; }
   .btn-add {
     display: flex; align-items: center; gap: 5px;
-    padding: 6px 14px;
+    padding: 8px 16px;
     background: var(--accent);
     color: #fff;
     border: none;
     border-radius: 8px;
     font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     cursor: pointer;
     transition: opacity 0.2s;
@@ -276,11 +276,11 @@
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--r2);
-    padding: 14px 16px;
-    margin-bottom: 8px;
+    padding: 16px 18px;
+    margin-bottom: 10px;
     display: grid;
-    grid-template-columns: 36px 1fr auto;
-    gap: 12px;
+    grid-template-columns: 40px 1fr auto;
+    gap: 14px;
     align-items: center;
     transition: border-color 0.2s, background 0.2s;
     cursor: pointer;
@@ -288,19 +288,19 @@
   }
   .asset-card:hover { border-color: var(--border2); background: var(--surface2); }
   .asset-icon {
-    width: 36px; height: 36px;
+    width: 40px; height: 40px;
     border-radius: 10px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 16px;
+    font-size: 18px;
     flex-shrink: 0;
   }
   .asset-info {}
-  .asset-name { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 2px; }
-  .asset-sub { font-size: 11px; color: var(--muted); font-family: 'DM Mono', monospace; }
+  .asset-name { font-size: 16px; font-weight: 500; color: var(--text); margin-bottom: 3px; }
+  .asset-sub { font-size: 13px; color: var(--muted); font-family: 'DM Mono', monospace; }
   .asset-right { text-align: right; }
-  .asset-value { font-size: 14px; font-weight: 500; color: var(--text); font-family: 'DM Mono', monospace; margin-bottom: 2px; }
+  .asset-value { font-size: 16px; font-weight: 500; color: var(--text); font-family: 'DM Mono', monospace; margin-bottom: 3px; }
   .asset-change {
-    font-size: 11px;
+    font-size: 13px;
     font-family: 'DM Mono', monospace;
     font-weight: 500;
   }
@@ -309,7 +309,7 @@
   .neu { color: var(--muted); }
   .asset-actions {
     position: absolute;
-    right: 12px; top: 50%;
+    right: 14px; top: 50%;
     transform: translateY(-50%);
     display: none;
     gap: 6px;
@@ -317,13 +317,13 @@
   .asset-card:hover .asset-actions { display: flex; }
   .asset-value-wrap { display: flex; flex-direction: column; align-items: flex-end; }
   .btn-icon {
-    width: 28px; height: 28px;
+    width: 32px; height: 32px;
     border: 1px solid var(--border2);
     background: var(--surface);
     border-radius: 7px;
     display: flex; align-items: center; justify-content: center;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 14px;
     transition: background 0.15s;
   }
   .btn-icon:hover { background: var(--surface2); }
@@ -345,54 +345,56 @@
     background: var(--surface);
     border: 1px solid var(--border2);
     border-radius: var(--r);
-    padding: 24px;
+    padding: 26px;
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     animation: slideUp 0.25s ease;
+    max-height: 90vh;
+    overflow-y: auto;
   }
   @keyframes slideUp {
     from { transform: translateY(20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
   }
-  .modal-title { font-size: 16px; font-weight: 600; margin-bottom: 20px; }
-  .form-group { margin-bottom: 14px; }
-  .form-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; display: block; margin-bottom: 6px; }
+  .modal-title { font-size: 18px; font-weight: 600; margin-bottom: 22px; }
+  .form-group { margin-bottom: 16px; }
+  .form-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; display: block; margin-bottom: 7px; }
   .form-input, .form-select {
     width: 100%;
-    padding: 10px 12px;
+    padding: 12px 14px;
     background: var(--surface2);
     border: 1px solid var(--border);
     border-radius: 8px;
     color: var(--text);
     font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     outline: none;
     transition: border-color 0.2s;
   }
   .form-input:focus, .form-select:focus { border-color: var(--accent); }
   .form-select option { background: var(--surface2); }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .modal-footer { display: flex; gap: 10px; margin-top: 20px; }
+  .modal-footer { display: flex; gap: 10px; margin-top: 22px; }
   .btn-cancel {
-    flex: 1; padding: 10px;
+    flex: 1; padding: 12px;
     background: var(--surface2);
     border: 1px solid var(--border);
     border-radius: 8px;
     color: var(--muted);
     font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     cursor: pointer;
     transition: color 0.2s;
   }
   .btn-cancel:hover { color: var(--text); }
   .btn-save {
-    flex: 2; padding: 10px;
+    flex: 2; padding: 12px;
     background: var(--accent);
     border: none;
     border-radius: 8px;
     color: #fff;
     font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     cursor: pointer;
     transition: opacity 0.2s;
@@ -404,37 +406,37 @@
     background: linear-gradient(135deg, rgba(245,200,66,0.08), rgba(245,164,66,0.05));
     border: 1px solid rgba(245,200,66,0.2);
     border-radius: var(--r2);
-    padding: 14px 16px;
-    margin-bottom: 12px;
+    padding: 16px 18px;
+    margin-bottom: 14px;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
   }
-  .savings-info .si-icon { font-size: 20px; }
+  .savings-info .si-icon { font-size: 22px; }
   .savings-info .si-text { flex: 1; }
-  .savings-info .si-rate { font-size: 12px; color: var(--gold); font-family: 'DM Mono', monospace; font-weight: 500; }
-  .savings-info .si-label { font-size: 11px; color: var(--muted); }
-  .savings-info .si-earned { font-size: 13px; font-family: 'DM Mono', monospace; color: var(--gold); font-weight: 500; }
+  .savings-info .si-rate { font-size: 14px; color: var(--gold); font-family: 'DM Mono', monospace; font-weight: 500; }
+  .savings-info .si-label { font-size: 12px; color: var(--muted); }
+  .savings-info .si-earned { font-size: 15px; font-family: 'DM Mono', monospace; color: var(--gold); font-weight: 500; }
 
   /* --- EMPTY STATE --- */
-  .empty { text-align: center; padding: 40px 20px; color: var(--muted); }
-  .empty .e-icon { font-size: 32px; margin-bottom: 10px; opacity: 0.5; }
-  .empty p { font-size: 13px; }
+  .empty { text-align: center; padding: 48px 20px; color: var(--muted); }
+  .empty .e-icon { font-size: 36px; margin-bottom: 12px; opacity: 0.5; }
+  .empty p { font-size: 15px; }
 
   /* --- PRICE TICKER --- */
   .ticker-bar {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 8px;
-    padding: 10px 16px;
+    padding: 11px 16px;
     margin-bottom: 20px;
     overflow: hidden;
     position: relative;
   }
   .ticker-scroll {
     display: flex;
-    gap: 24px;
-    animation: ticker 30s linear infinite;
+    gap: 28px;
+    animation: ticker 35s linear infinite;
     white-space: nowrap;
   }
   .ticker-scroll:hover { animation-play-state: paused; }
@@ -443,21 +445,21 @@
     100% { transform: translateX(-50%); }
   }
   .ticker-item {
-    display: flex; align-items: center; gap: 6px;
-    font-size: 11px; font-family: 'DM Mono', monospace;
+    display: flex; align-items: center; gap: 7px;
+    font-size: 13px; font-family: 'DM Mono', monospace;
     flex-shrink: 0;
   }
   .ticker-name { color: var(--muted); }
   .ticker-price { color: var(--text); }
 
-  /* --- RATE REFRESH --- */
+  /* --- RATE ROW --- */
   .rate-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 0;
+    padding: 9px 0;
     border-bottom: 1px solid var(--border);
-    font-size: 12px;
+    font-size: 14px;
   }
   .rate-row:last-child { border-bottom: none; }
   .rate-name { color: var(--muted); }
@@ -471,13 +473,13 @@
   /* --- TOAST --- */
   .toast {
     position: fixed;
-    bottom: 24px; left: 50%;
+    bottom: 28px; left: 50%;
     transform: translateX(-50%) translateY(80px);
     background: var(--surface2);
     border: 1px solid var(--border2);
     border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 13px;
+    padding: 12px 22px;
+    font-size: 15px;
     z-index: 200;
     transition: transform 0.3s ease;
     white-space: nowrap;
@@ -486,18 +488,42 @@
 
   /* --- SECTION DIVIDER --- */
   .section-label {
-    font-size: 10px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--subtle);
-    margin: 16px 0 8px;
+    margin: 18px 0 10px;
     font-weight: 500;
+  }
+
+  /* --- GOLD PRICE INFO BOX --- */
+  .gold-live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: var(--gold);
+    background: rgba(245,200,66,0.1);
+    border: 1px solid rgba(245,200,66,0.2);
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  /* --- INFO HINT --- */
+  .form-hint {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 5px;
+    font-style: italic;
   }
 
   /* Mobile adjustments */
   @media (max-width: 400px) {
-    .total-value { font-size: 26px; }
+    .total-value { font-size: 28px; }
     .chart-section { grid-template-columns: 1fr; }
+    body { font-size: 15px; }
   }
 </style>
 </head>
@@ -568,8 +594,8 @@
   <div class="savings-info" id="savingsInfoBox" style="display:none">
     <div class="si-icon">💰</div>
     <div class="si-text">
-      <div class="si-label">Bunga Tabungan</div>
-      <div class="si-rate">0.8% / bulan</div>
+      <div class="si-label">Bunga Tabungan (rata-rata / bulan)</div>
+      <div class="si-rate" id="avgRateLabel">— % / bulan</div>
     </div>
     <div>
       <div class="si-label" style="text-align:right">Bunga Terkumpul</div>
@@ -591,7 +617,7 @@
         <select class="form-select" id="fCategory" onchange="onCategoryChange()">
           <option value="crypto">₿ Crypto</option>
           <option value="gold">🪙 Emas</option>
-          <option value="stock">📈 Saham</option>
+          <option value="stock">📈 Saham (IDX)</option>
           <option value="savings">🏦 Tabungan</option>
           <option value="cash">💵 Kas</option>
         </select>
@@ -608,7 +634,7 @@
           <label class="form-label" id="fAmountLabel">Jumlah</label>
           <input class="form-input" id="fAmount" type="number" step="any" placeholder="0">
         </div>
-        <div class="form-group" id="fCurrencyGroup">
+        <div class="form-group" id="fCurrencyGroup" style="display:none">
           <label class="form-label">Satuan</label>
           <select class="form-select" id="fCurrency">
             <option value="IDR">IDR</option>
@@ -618,13 +644,20 @@
       </div>
 
       <div class="form-group" id="fBuyPriceGroup">
-        <label class="form-label">Harga Beli (per unit, IDR)</label>
+        <label class="form-label" id="fBuyPriceLabel">Harga Beli (per unit, IDR)</label>
         <input class="form-input" id="fBuyPrice" type="number" step="any" placeholder="0">
       </div>
 
       <div class="form-group" id="fMonthsGroup" style="display:none">
         <label class="form-label">Durasi Menabung (bulan)</label>
         <input class="form-input" id="fMonths" type="number" placeholder="0" min="0">
+      </div>
+
+      <!-- Interest rate field for savings -->
+      <div class="form-group" id="fRateGroup" style="display:none">
+        <label class="form-label">Bunga per Bulan (%)</label>
+        <input class="form-input" id="fRate" type="number" step="0.01" placeholder="contoh: 0.5" min="0" max="100">
+        <div class="form-hint">Contoh: BCA 0.33% / bulan, Deposito ~0.5% / bulan</div>
       </div>
 
       <div class="modal-footer">
@@ -650,74 +683,117 @@ let activeTab = 'all';
 let editMode = false;
 
 const CATEGORY_META = {
-  crypto: { label: 'Crypto', icon: '₿', color: '#7c6ef7' },
-  gold:   { label: 'Emas',   icon: '🪙', color: '#f5c842' },
-  stock:  { label: 'Saham',  icon: '📈', color: '#4ea8de' },
-  savings:{ label: 'Tabungan',icon:'🏦', color: '#3ecf8e' },
-  cash:   { label: 'Kas',    icon: '💵', color: '#6b6b80' },
+  crypto: { label: 'Crypto',   icon: '₿',  color: '#7c6ef7' },
+  gold:   { label: 'Emas',     icon: '🪙', color: '#f5c842' },
+  stock:  { label: 'Saham',    icon: '📈', color: '#4ea8de' },
+  savings:{ label: 'Tabungan', icon: '🏦', color: '#3ecf8e' },
+  cash:   { label: 'Kas',      icon: '💵', color: '#6b6b80' },
 };
 
-// Crypto symbols to fetch (CoinGecko IDs -> symbol)
+// Crypto: CoinGecko IDs -> symbol
 const CRYPTO_MAP = {
   bitcoin: 'BTC', ethereum: 'ETH', binancecoin: 'BNB',
   solana: 'SOL', ripple: 'XRP', cardano: 'ADA',
   dogecoin: 'DOGE', polkadot: 'DOT', 'shiba-inu': 'SHIB',
   avalanche: 'AVAX', chainlink: 'LINK', 'matic-network': 'MATIC',
   uniswap: 'UNI', litecoin: 'LTC', 'bitcoin-cash': 'BCH',
+  tron: 'TRX', stellar: 'XLM', 'near': 'NEAR', 'aptos': 'APT',
+  sui: 'SUI', pepe: 'PEPE', 'bonk': 'BONK',
 };
 
-// Gold IDR per gram approximate (will try to fetch)
-let goldPriceIDR = 1600000; // fallback Rp/gram
+// Gold: live IDR/gram (will be fetched from multiple sources)
+let goldPriceIDR = 1750000; // fallback ~Apr 2025 estimate
 
-// Stock price cache (IDX not easily available via free CORS, use manual)
+// Stock price cache (IDX)
 let stockPrices = {}; // BBRI -> IDR per lembar
 
 // ============================================================
 // FETCH PRICES
 // ============================================================
 async function fetchPrices() {
+  // 1. USD/IDR
   try {
-    // 1. USD/IDR via exchangerate-api
     const fxRes = await fetch('https://open.er-api.com/v6/latest/USD');
     if (fxRes.ok) {
       const fxData = await fxRes.json();
-      usdIdr = fxData.rates.IDR || usdIdr;
+      usdIdr = fxData.rates?.IDR || usdIdr;
       document.getElementById('rateLabel').textContent = `USD ${fmt(usdIdr,0)}`;
     }
   } catch(e) {}
 
+  // 2. Crypto via CoinGecko (free, no key needed)
   try {
-    // 2. Crypto prices via CoinGecko (free, no key)
     const ids = Object.keys(CRYPTO_MAP).join(',');
-    const cgRes = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd`);
+    const cgRes = await fetch(
+      `https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd`,
+      { headers: { 'Accept': 'application/json' } }
+    );
     if (cgRes.ok) {
       const cgData = await cgRes.json();
       for (const [id, sym] of Object.entries(CRYPTO_MAP)) {
-        if (cgData[id]) prices[sym] = cgData[id].usd * usdIdr;
+        if (cgData[id]?.usd) prices[sym] = cgData[id].usd * usdIdr;
       }
     }
   } catch(e) {}
 
-  try {
-    // 3. Gold price via metals-api fallback to goldapi / manual estimate
-    // Using a free CORS-friendly gold price endpoint
-    const goldRes = await fetch('https://data-asg.goldprice.org/dbXRates/USD');
-    if (goldRes.ok) {
-      const g = await goldRes.json();
-      // items[0].xauPrice = USD per troy oz
-      const usdPerOz = g.items?.[0]?.xauPrice;
-      if (usdPerOz) {
-        const usdPerGram = usdPerOz / 31.1035;
-        goldPriceIDR = usdPerGram * usdIdr;
-        prices['XAU'] = goldPriceIDR;
-      }
-    }
-  } catch(e) {
-    prices['XAU'] = goldPriceIDR; // fallback
-  }
+  // 3. Gold price — primary: goldprice.org live feed (IDR/gram)
+  //    Tries multiple free endpoints in sequence.
+  await fetchGoldPrice();
 
   updateLastUpdate();
   renderAll();
+}
+
+async function fetchGoldPrice() {
+  // Source A: goldprice.org XRates (USD/oz -> IDR/gram)
+  try {
+    const res = await fetch('https://data-asg.goldprice.org/dbXRates/USD');
+    if (res.ok) {
+      const d = await res.json();
+      // xauPrice = USD per troy oz (1 oz = 31.1035 g)
+      const usdPerOz = d?.items?.[0]?.xauPrice;
+      if (usdPerOz && usdPerOz > 1000) { // sanity check
+        goldPriceIDR = (usdPerOz / 31.1035) * usdIdr;
+        prices['XAU'] = goldPriceIDR;
+        return;
+      }
+    }
+  } catch(e) {}
+
+  // Source B: metals-api open rates (USD per troy oz)
+  try {
+    const res = await fetch('https://metals-api.com/api/latest?access_key=openrates&base=USD&symbols=XAU');
+    if (res.ok) {
+      const d = await res.json();
+      // d.rates.XAU = oz per 1 USD => invert to get USD/oz
+      const rateXAU = d?.rates?.XAU;
+      if (rateXAU && rateXAU > 0) {
+        const usdPerOz = 1 / rateXAU;
+        goldPriceIDR = (usdPerOz / 31.1035) * usdIdr;
+        prices['XAU'] = goldPriceIDR;
+        return;
+      }
+    }
+  } catch(e) {}
+
+  // Source C: derive from BTC/GOLD ratio via another CoinGecko call
+  // Using "gold" as vs_currency doesn't work on free tier, so we do a PAXG lookup:
+  // PAXG (Pax Gold) tracks 1 troy oz of gold
+  try {
+    const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=pax-gold&vs_currencies=usd');
+    if (res.ok) {
+      const d = await res.json();
+      const usdPerOz = d?.['pax-gold']?.usd;
+      if (usdPerOz && usdPerOz > 1000) {
+        goldPriceIDR = (usdPerOz / 31.1035) * usdIdr;
+        prices['XAU'] = goldPriceIDR;
+        return;
+      }
+    }
+  } catch(e) {}
+
+  // Fallback: keep existing goldPriceIDR estimate
+  prices['XAU'] = goldPriceIDR;
 }
 
 function updateLastUpdate() {
@@ -735,26 +811,24 @@ function getAssetValueIDR(asset) {
   }
   if (asset.category === 'savings') {
     const months = asset.months || 0;
-    const interest = asset.amount * Math.pow(1 + 0.008, months) - asset.amount;
+    const rate = (asset.interestRate || 0.5) / 100; // % per month
+    const interest = asset.amount * Math.pow(1 + rate, months) - asset.amount;
     const totalSavings = asset.amount + interest;
     return asset.currency === 'USD' ? totalSavings * usdIdr : totalSavings;
   }
   if (asset.category === 'gold') {
-    // amount in grams
     return asset.amount * (prices['XAU'] || goldPriceIDR);
   }
   if (asset.category === 'crypto') {
     const sym = asset.symbol?.toUpperCase();
     const p = prices[sym];
     if (p) return asset.amount * p;
-    // fallback: use stored manual price
     return asset.amount * (asset.manualPrice || 0);
   }
   if (asset.category === 'stock') {
-    // IDX stock in lots (1 lot = 100 lembar), amount = number of lots
-    // price per lembar in IDR
+    // IDX: amount = lots, 1 lot = 100 lembar, price per lembar
     const p = stockPrices[asset.symbol?.toUpperCase()] || asset.manualPrice || 0;
-    return asset.amount * 100 * p; // lots * 100 shares * price
+    return asset.amount * 100 * p;
   }
   return 0;
 }
@@ -786,6 +860,7 @@ function renderAll() {
 }
 
 function fmt(n, dec=0) {
+  if (isNaN(n) || n === null) return '0';
   if (n >= 1e12) return (n/1e12).toFixed(1) + 'T';
   if (n >= 1e9) return (n/1e9).toFixed(1) + 'M';
   if (n >= 1e6) return (n/1e6).toFixed(1) + 'Jt';
@@ -803,9 +878,13 @@ function renderTotal() {
   if (totalBuy > 0) {
     const pct = ((total - totalBuy) / totalBuy * 100).toFixed(2);
     const el = document.getElementById('totalChange');
-    const pos = pct >= 0;
+    const pos = parseFloat(pct) >= 0;
     el.textContent = (pos ? '+' : '') + pct + '%';
     el.className = 'total-change ' + (pos ? 'pos' : 'neg');
+  } else {
+    const el = document.getElementById('totalChange');
+    el.textContent = '+0%';
+    el.className = 'total-change pos';
   }
 }
 
@@ -820,15 +899,14 @@ function renderDonut() {
 
   const svg = document.getElementById('donutChart');
   svg.innerHTML = '';
-  const cx = 70, cy = 70, r = 54, ir = 38;
+  const cx = 70, cy = 70, r = 56, ir = 38;
   let start = -Math.PI / 2;
 
   if (total === 0) {
-    // empty circle
     const circle = document.createElementNS('http://www.w3.org/2000/svg','circle');
     circle.setAttribute('cx', cx); circle.setAttribute('cy', cy);
     circle.setAttribute('r', r); circle.setAttribute('fill','none');
-    circle.setAttribute('stroke','#1e1e2e'); circle.setAttribute('stroke-width','16');
+    circle.setAttribute('stroke','#1e1e2e'); circle.setAttribute('stroke-width','18');
     svg.appendChild(circle);
     document.getElementById('donutLegend').innerHTML = '';
     document.getElementById('barList').innerHTML = '';
@@ -861,7 +939,6 @@ function renderDonut() {
     svg.appendChild(path);
     start = end;
 
-    // Legend
     const li = document.createElement('div');
     li.className = 'legend-item';
     li.innerHTML = `
@@ -901,16 +978,24 @@ function renderAssets() {
   const filtered = activeTab === 'all' ? assets : assets.filter(a => a.category === activeTab);
   const el = document.getElementById('assetList');
 
-  // Savings interest info
+  // Savings interest info box
   const sibEl = document.getElementById('savingsInfoBox');
   if (activeTab === 'savings') {
     sibEl.style.display = 'flex';
-    const totalInt = assets.filter(a=>a.category==='savings').reduce((s,a) => {
+    const savingsAssets = assets.filter(a => a.category === 'savings');
+    const totalInt = savingsAssets.reduce((s, a) => {
       const months = a.months || 0;
-      const interest = a.amount * Math.pow(1 + 0.008, months) - a.amount;
-      return s + interest;
+      const rate = (a.interestRate || 0.5) / 100;
+      return s + (a.amount * Math.pow(1 + rate, months) - a.amount);
     }, 0);
     document.getElementById('totalInterest').textContent = fmtFull(totalInt);
+
+    // Compute weighted avg rate
+    const totalPrincipal = savingsAssets.reduce((s,a) => s + a.amount, 0);
+    const avgRate = totalPrincipal > 0
+      ? savingsAssets.reduce((s,a) => s + (a.interestRate||0.5) * a.amount, 0) / totalPrincipal
+      : 0;
+    document.getElementById('avgRateLabel').textContent = avgRate > 0 ? `${avgRate.toFixed(2)}% / bulan` : '— % / bulan';
   } else {
     sibEl.style.display = 'none';
   }
@@ -920,7 +1005,6 @@ function renderAssets() {
     return;
   }
 
-  // Group by category if 'all'
   if (activeTab === 'all') {
     const groups = ['crypto','gold','stock','savings','cash'];
     let html = '';
@@ -941,21 +1025,29 @@ function assetCardHTML(a) {
   const pnl = getPnLPct(a);
   const meta = CATEGORY_META[a.category];
   let sub = '';
-  if (a.category === 'crypto') sub = `${a.amount} ${a.symbol?.toUpperCase()} · Rp ${fmt(prices[a.symbol?.toUpperCase()]||a.manualPrice||0)}/unit`;
-  else if (a.category === 'gold') sub = `${a.amount} gram · Rp ${fmt(prices['XAU']||goldPriceIDR)}/gram`;
-  else if (a.category === 'stock') sub = `${a.amount} lot · Rp ${fmt(stockPrices[a.symbol?.toUpperCase()]||a.manualPrice||0)}/lembar`;
-  else if (a.category === 'savings') {
-    const months = a.months||0;
-    sub = `${months} bulan · bunga kumulatif`;
+
+  if (a.category === 'crypto') {
+    const p = prices[a.symbol?.toUpperCase()] || a.manualPrice || 0;
+    sub = `${a.amount} ${a.symbol?.toUpperCase()} · Rp ${fmt(p)}/unit`;
+  } else if (a.category === 'gold') {
+    const p = prices['XAU'] || goldPriceIDR;
+    sub = `${a.amount} gram · Rp ${fmt(p)}/gram`;
+  } else if (a.category === 'stock') {
+    const p = stockPrices[a.symbol?.toUpperCase()] || a.manualPrice || 0;
+    sub = `${a.amount} lot · Rp ${fmt(p)}/lembar`;
+  } else if (a.category === 'savings') {
+    const rate = a.interestRate || 0.5;
+    sub = `${a.months || 0} bulan · bunga ${rate}%/bln`;
+  } else if (a.category === 'cash') {
+    sub = `${a.currency || 'IDR'} ${fmt(a.amount, a.currency === 'USD' ? 2 : 0)}`;
   }
-  else if (a.category === 'cash') sub = `${a.currency} ${fmt(a.amount, a.currency==='USD'?2:0)}`;
 
   const pnlHtml = pnl !== null
     ? `<span class="asset-change ${pnl>=0?'pos':'neg'}">${pnl>=0?'▲':'▼'} ${Math.abs(pnl).toFixed(2)}%</span>`
     : `<span class="asset-change neu">—</span>`;
 
   return `<div class="asset-card">
-    <div class="asset-icon" style="background:${meta.color}22;font-size:18px;">${meta.icon}</div>
+    <div class="asset-icon" style="background:${meta.color}22;font-size:20px;">${meta.icon}</div>
     <div class="asset-info">
       <div class="asset-name">${a.name || a.symbol || meta.label}</div>
       <div class="asset-sub">${sub}</div>
@@ -976,12 +1068,14 @@ function assetCardHTML(a) {
 function renderTicker() {
   const tickerItems = [
     { name: 'USD/IDR', val: `Rp ${fmt(usdIdr,0)}` },
+    { name: 'EMAS', val: `Rp ${fmt(prices['XAU']||goldPriceIDR)}/g` },
     { name: 'BTC', val: `Rp ${fmt(prices['BTC']||0)}` },
     { name: 'ETH', val: `Rp ${fmt(prices['ETH']||0)}` },
-    { name: 'EMAS', val: `Rp ${fmt(prices['XAU']||goldPriceIDR)}/g` },
     { name: 'BNB', val: `Rp ${fmt(prices['BNB']||0)}` },
     { name: 'SOL', val: `Rp ${fmt(prices['SOL']||0)}` },
     { name: 'XRP', val: `Rp ${fmt(prices['XRP']||0)}` },
+    { name: 'DOGE', val: `Rp ${fmt(prices['DOGE']||0)}` },
+    { name: 'ADA', val: `Rp ${fmt(prices['ADA']||0)}` },
   ];
   const html = [...tickerItems, ...tickerItems].map(t =>
     `<div class="ticker-item"><span class="ticker-name">${t.name}</span><span class="ticker-price">${t.val}</span></div>`
@@ -1006,42 +1100,52 @@ function switchTab(tab, btn) {
 // ============================================================
 function onCategoryChange() {
   const cat = document.getElementById('fCategory').value;
-  const buyGrp = document.getElementById('fBuyPriceGroup');
-  const monthsGrp = document.getElementById('fMonthsGroup');
+  const buyGrp   = document.getElementById('fBuyPriceGroup');
+  const monthsGrp= document.getElementById('fMonthsGroup');
+  const rateGrp  = document.getElementById('fRateGroup');
   const amtLabel = document.getElementById('fAmountLabel');
-  const curGrp = document.getElementById('fCurrencyGroup');
-  const nameGrp = document.getElementById('fNameGroup');
+  const curGrp   = document.getElementById('fCurrencyGroup');
+  const nameGrp  = document.getElementById('fNameGroup');
+  const buyLabel = document.getElementById('fBuyPriceLabel');
   const datalist = document.getElementById('symbolSuggest');
 
-  monthsGrp.style.display = cat === 'savings' ? 'block' : 'none';
-  buyGrp.style.display = (cat === 'cash') ? 'none' : 'block';
-  curGrp.style.display = (cat === 'cash' || cat === 'savings') ? 'block' : 'none';
+  // Reset visibility
+  monthsGrp.style.display = 'none';
+  rateGrp.style.display = 'none';
+  buyGrp.style.display = 'block';
+  curGrp.style.display = 'none';
+  nameGrp.style.display = 'block';
 
   if (cat === 'gold') {
     amtLabel.textContent = 'Jumlah (gram)';
+    buyLabel.textContent = 'Harga Beli per Gram (IDR)';
     document.getElementById('fName').value = 'Emas';
     nameGrp.style.display = 'none';
   } else if (cat === 'stock') {
     amtLabel.textContent = 'Jumlah (lot)';
-    nameGrp.style.display = 'block';
+    buyLabel.textContent = 'Harga Beli per Lembar (IDR)';
     document.getElementById('fName').placeholder = 'e.g. BBRI, BBCA, TLKM';
-    buyGrp.querySelector('.form-label').textContent = 'Harga Beli per Lembar (IDR)';
+    datalist.innerHTML = '';
   } else if (cat === 'crypto') {
     amtLabel.textContent = 'Jumlah (koin)';
-    nameGrp.style.display = 'block';
+    buyLabel.textContent = 'Harga Beli per Unit (IDR)';
     document.getElementById('fName').placeholder = 'e.g. BTC, ETH, SOL';
-    buyGrp.querySelector('.form-label').textContent = 'Harga Beli per Unit (IDR)';
-    // Suggest symbols
     datalist.innerHTML = Object.values(CRYPTO_MAP).map(s => `<option value="${s}">`).join('');
   } else if (cat === 'savings') {
     amtLabel.textContent = 'Pokok Tabungan (IDR)';
-    nameGrp.style.display = 'block';
     document.getElementById('fName').placeholder = 'e.g. BCA, Mandiri';
+    buyGrp.style.display = 'none';
+    monthsGrp.style.display = 'block';
+    rateGrp.style.display = 'block';
+    curGrp.style.display = 'block';
+    datalist.innerHTML = '';
   } else if (cat === 'cash') {
     amtLabel.textContent = 'Jumlah';
-    nameGrp.style.display = 'block';
-    document.getElementById('fName').placeholder = 'e.g. Dompet, OVO';
+    buyLabel.textContent = '';
+    document.getElementById('fName').placeholder = 'e.g. Dompet, OVO, GoPay';
+    buyGrp.style.display = 'none';
     curGrp.style.display = 'block';
+    datalist.innerHTML = '';
   }
 }
 
@@ -1054,6 +1158,7 @@ function openModal() {
   document.getElementById('fAmount').value = '';
   document.getElementById('fBuyPrice').value = '';
   document.getElementById('fMonths').value = '';
+  document.getElementById('fRate').value = '';
   document.getElementById('fCurrency').value = 'IDR';
   onCategoryChange();
   document.getElementById('overlay').classList.add('show');
@@ -1071,6 +1176,7 @@ function openEdit(id) {
   document.getElementById('fAmount').value = a.amount;
   document.getElementById('fBuyPrice').value = a.buyPrice || '';
   document.getElementById('fMonths').value = a.months || '';
+  document.getElementById('fRate').value = a.interestRate || '';
   document.getElementById('fCurrency').value = a.currency || 'IDR';
   document.getElementById('overlay').classList.add('show');
 }
@@ -1084,14 +1190,16 @@ function closeOnOverlay(e) {
 }
 
 function saveAsset() {
-  const cat = document.getElementById('fCategory').value;
-  const name = document.getElementById('fName').value.trim();
-  const amount = parseFloat(document.getElementById('fAmount').value);
+  const cat      = document.getElementById('fCategory').value;
+  const name     = document.getElementById('fName').value.trim();
+  const amount   = parseFloat(document.getElementById('fAmount').value);
   const buyPrice = parseFloat(document.getElementById('fBuyPrice').value) || 0;
-  const months = parseInt(document.getElementById('fMonths').value) || 0;
+  const months   = parseInt(document.getElementById('fMonths').value) || 0;
+  const rate     = parseFloat(document.getElementById('fRate').value) || 0.5;
   const currency = document.getElementById('fCurrency').value;
 
   if (!amount || amount <= 0) { showToast('⚠️ Masukkan jumlah yang valid'); return; }
+  if (cat === 'savings' && rate <= 0) { showToast('⚠️ Masukkan bunga yang valid'); return; }
 
   const id = document.getElementById('editId').value || Date.now().toString();
   const asset = { id, category: cat, amount, buyPrice, currency };
@@ -1107,11 +1215,11 @@ function saveAsset() {
     asset.symbol = name.toUpperCase();
     asset.name = name.toUpperCase();
     asset.manualPrice = buyPrice;
-    // Try to fetch stock price
     fetchStockPrice(name.toUpperCase());
   } else if (cat === 'savings') {
     asset.name = name || 'Tabungan';
     asset.months = months;
+    asset.interestRate = rate; // % per month
   } else {
     asset.name = name || 'Kas';
   }
@@ -1130,6 +1238,7 @@ function saveAsset() {
 }
 
 function deleteAsset(id) {
+  if (!confirm('Hapus aset ini?')) return;
   assets = assets.filter(a => a.id !== id);
   save();
   renderAll();
@@ -1145,7 +1254,6 @@ function save() {
 // ============================================================
 async function fetchStockPrice(symbol) {
   try {
-    // Using Yahoo Finance IDX symbol: e.g. BBRI.JK
     const url = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}.JK?interval=1d&range=1d`;
     const proxy = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
     const res = await fetch(proxy);
@@ -1168,13 +1276,12 @@ function showToast(msg) {
   const el = document.getElementById('toast');
   el.textContent = msg;
   el.classList.add('show');
-  setTimeout(() => el.classList.remove('show'), 2500);
+  setTimeout(() => el.classList.remove('show'), 2800);
 }
 
 // ============================================================
 // INIT
 // ============================================================
-// Fetch stock prices for existing stocks
 async function initStocks() {
   const stocks = assets.filter(a => a.category === 'stock');
   for (const s of stocks) {
@@ -1182,11 +1289,19 @@ async function initStocks() {
   }
 }
 
+// Migrate old savings assets that don't have interestRate
+assets = assets.map(a => {
+  if (a.category === 'savings' && !a.interestRate) {
+    a.interestRate = 0.5; // default 0.5% per month
+  }
+  return a;
+});
+save();
+
 fetchPrices();
 initStocks();
 setInterval(fetchPrices, 60000); // refresh every 60s
 
-// Initial render with cached data
 renderAll();
 </script>
 </body>
